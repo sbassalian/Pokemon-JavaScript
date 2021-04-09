@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="./dist/main.css" /> -->
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <title>Pokemon Battle Arena</title>
+    
+</head>
+
+<body class="body">
+    <script type="module" src="./dist/main.js"></script>
+    <script type="module" src="./src/scripts/game.js"></script>
+    <script type="module" src="./src/scripts/functionality.js"></script>
+    <div class='header'>
+        <h1>Welcome to Pokemon Battle Arena!</h1>
+    </div>
+        <div class="rules-box">
+            <div class="rules">
+                <h1>Rules:</h1>
+                <span>Select a pokemon</span>
+                <br>
+                <span>Select 4 moves</span>
+                <br>
+                <span>Hit start game!</span>
+            </div>
+            <div id="poke-info-name">
+                <h2>Pokemon:</h2>
+                <span id="fixpokename"></span>
+            </div>
+            <div id='poke-info'>
+                <h2>Moves:</h2>
+            </div>
+            <div id="testing">
+                <button id="testingbutton">Start Game!</button>
+            </div>
+        </div>
+
+        <div id="player1box">
+
+        </div>
+
+        <div id=player2box>
+
+        </div>
+        
+        <div class="background">
+            <img src='./dist/images/background.png' alt="" >
+        </div>
+
+    
+    
+
+    <!-- <div id ="table">
+        <div>
+            <span>What will POKEMON do?</span>
+        </div>
+        <div>
+            <button>Fight</button>
+            <button>Pokemon</button>
+            <button>Bag</button>
+            <button>Run</button>
+        </div>
+    </div> -->
+    <div class = "attacks">
+        <div class="attacks-left">
+            <div class="attack-buttons">
+                <button id="move1"></button>
+                <button id="move2"></button>
+            </div>
+            <div class="attack-buttons">
+                <button id="move3"></button>
+                <button id="move4"></button>
+            </div>
+        </div>
+        <div class="attack-side">
+            <span id="as1">PP</span>
+            <span id="as2">""</span>
+        </div>
+
+    </div>
+
+    <div class="going-test">
+        <!-- <div class="gtc"> -->
+            <div id='player-1-going'>
+    
+            </div>
+    
+            <div id='player-2-going'>
+    
+            </div>
+
+            <div >
+                <span id="desc"></span>
+            </div>
+        <!-- </div> -->
+    </div>
+
+
+    <div class="DivToScroll">
+        <h1 class="selectpokeh1">Select a pokemon!</h1>
+        <div class="DivWithScroll" id='index'>
+        </div>
+    </div>
+
+    <div class="DivToScroll">
+        <h1 class="selectpokeh1">Select 4 moves!</h1>
+        <div class="DivWithScroll" id='index3'>
+        </div>
+    </div>
+<!-- 
+    
+
+    <br>
+    <br>
+    <br>
+
+    <div class="DivToScroll">
+        <h1 class="selectpokeh1">Select an opposing pokemon!</h1>
+        <div class="DivWithScroll" id='index2'>
+    
+        </div>
+    </div> -->
+
+    <!-- <br>
+    <br>
+    <br>
+    
+    <div class="DivToScroll">
+        <h1 class="selectpokeh1">Select 4 moves!</h1>
+        <div class="DivWithScroll" id='index4'>
+        </div>
+    </div> -->
+
+
+
+   
+</body>
+
+</html>
