@@ -152,6 +152,21 @@ function spawnPlayer1(){
 function spawnPlayer2(){
     let randompoke = pokemon[Math.floor(Math.random() * pokemon.length)]
 
+    // let randommove = '';
+    // let power = 0;
+
+    // while (player2moves.length < 4){
+    //     randommove = randompoke.moves[Math.floor(Math.random() * randompoke.moves.length)];
+
+    //     getDamage(randommove).then((data) => {
+    //         power = data[1];
+    //         if (!player2moves.includes(randommove) && power > 0){
+    //             player2moves.push(randommove);
+    //         }
+    //     })
+        
+    // }
+
     let randommove1a = randompoke.moves[Math.floor(Math.random() * randompoke.moves.length)];
     let randommove1 = Object.values(randommove1a)[0].name;
     let randommove2a = randompoke.moves[Math.floor(Math.random() * randompoke.moves.length)];
@@ -181,7 +196,7 @@ function startGame(){
     button.addEventListener('click', spawnPlayer1());
     button.addEventListener('click', spawnPlayer2());
 
-    console.log("hit me");
+    console.log(player2moves);
     
     let span = document.createElement('span');
     let hpinfo = player1data[3];
@@ -232,7 +247,7 @@ function attack(attacker, defender, move) {
             alert(attacker + ' Won! ' + ' Please refresh page to start a new battle!')
         }
         else{
-            setTimeout(() => enemyAttack(defender, attacker), 2000)
+            setTimeout(() => enemyAttack(defender, attacker), 1500)
         }
     })
 
