@@ -227,10 +227,12 @@ function attack(attacker, defender, move) {
     
     move.then(data => document.getElementById('desc').innerHTML = attacker + ' used ' + data[0] + ' on ' + defender + '!' ).then(() => document.getElementById('battlehp2').innerHTML -= damage ).then(()=> {
         if (document.getElementById('battlehp2').innerHTML <= 0){
-            document.getElementById('desc').innerHTML = attacker + ' Won! ' + ' Please refresh page to start a new battle!'
+            // document.getElementById('desc').innerHTML = attacker + ' Won! ' + ' Please refresh page to start a new battle!'
+
+            alert(attacker + ' Won! ' + ' Please refresh page to start a new battle!')
         }
         else{
-            setTimeout(enemyAttack(defender, attacker), 50000)
+            setTimeout(() => enemyAttack(defender, attacker), 2000)
         }
     })
 
@@ -253,7 +255,8 @@ function enemyAttack(attacker, defender){
 
     getDamage(battlemove).then(data => document.getElementById('desc').innerHTML = attacker + ' used ' + battlemove + ' on ' + defender + '!').then(() => document.getElementById('battlehp1').innerHTML -= damage ).then(()=> {
         if (document.getElementById('battlehp1').innerHTML <= 0) {
-            document.getElementById('desc').innerHTML = attacker + ' Won! ' + ' Please refresh page to start a new battle!'
+            // document.getElementById('desc').innerHTML = attacker + ' Won! ' + ' Please refresh page to start a new battle!'
+            alert(attacker + ' Won! ' + ' Please refresh page to start a new battle!')
         }
     })
 
