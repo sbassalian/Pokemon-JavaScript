@@ -33,9 +33,9 @@
 .attacks {
     position: absolute;
     display: flex;
-    top: 460px;
+    top: 58%;
     height: 120px;
-    left: 250px;
+    left: 17.5%;
     width: fit-content;
 }
 .attacks-left {
@@ -92,8 +92,8 @@
     flex-direction: column;
     position: fixed;
 
-    top: 95px;
-    left: 10px;
+    top: 12%;
+    left: .7%;
     border: 1px solid white;
     border-radius: 12px;
     width: fit-content;
