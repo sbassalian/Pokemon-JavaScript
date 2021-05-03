@@ -210,25 +210,62 @@
 }
 
 .going-test {
-    border: 1px solid white;
+    border: none;
     width: 70%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 50px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#player-1-going{
-    border: 1px solid blue;
-    height: fit-content;
-    /* margin-left: 50px; */
-    
+
+
+#battlehp1 {
+    font-family: gamefont;
+    position: absolute;
+    top: 340px;
+    left: 880px;
+    font-size: 26px;
 }
 
-#player-2-going{
-    border: 1px solid red;
-    height: fit-content;
+#battlehp2 {
+    font-family: gamefont;
+    position: absolute;
+    top: 162px;
+    left: 370px;
+    font-size: 26px;
 }
 
+#HP1 {
+    font-family: gamefont;
+    position: absolute;
+    top: 340px;
+    left: 820px;
+    font-size: 26px;
+}
+
+#HP2 {
+    font-family: gamefont;
+    position: absolute;
+    top: 162px;
+    left: 310px;
+    font-size: 26px;
+}
+
+#player-1-going {
+    align-items: center;
+}
+
+#desc {
+ font-family: gamefont;
+    background-color: transparent;
+    color: white;
+    font-size: large;
+    /* border: 1px solid white; */
+    border-radius: 12px;
+    padding: 10px;
+    word-spacing: 10px;
+
+}

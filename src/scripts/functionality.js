@@ -7,6 +7,8 @@ let player2data = [];
 
 let player2moves= [];
 
+let gameStarted = 0;
+
 async function getDamage(name) {
     let moveinfo = []
     const url3 = `https://pokeapi.co/api/v2/move/${name}/`;
@@ -20,6 +22,7 @@ async function getDamage(name) {
 
 
 }
+
 
 
 // class Pokemon{
@@ -163,6 +166,9 @@ function spawnPlayer2(){
     //         if (!player2moves.includes(randommove) && power > 0){
     //             player2moves.push(randommove);
     //         }
+    //         else{
+    //             player2moves.push("fail")
+    //         }
     //     })
         
     // }
@@ -180,6 +186,8 @@ function spawnPlayer2(){
 
     player2moves.push(randommove1, randommove2, randommove3, randommove4)
 
+    // player2data.push(randompoke.name, randompoke.front, randompoke.back, randompoke.hp + 200, randompoke.types, player2moves[0], player2moves[1], player2moves[2], player2moves[3])
+
     let player2pic = document.createElement('img');
     player2pic.src = randompoke.front;
     player2pic.setAttribute("id", 'player2');
@@ -190,7 +198,10 @@ function spawnPlayer2(){
 }
 
 function startGame(){
-
+    gameStarted += 1
+    if (gameStarted > 1) {
+        return false
+    } 
 
     let button = document.getElementById('testingbutton');
     button.addEventListener('click', spawnPlayer1());
@@ -199,17 +210,26 @@ function startGame(){
     console.log(player2moves);
     
     let span = document.createElement('span');
+    let span3 = document.createElement('span');
+    span3.innerHTML = "HP"
+    span3.setAttribute("id", 'HP1');
     let hpinfo = player1data[3];
     span.innerHTML = hpinfo;
     span.setAttribute("id", 'battlehp1');
+    document.getElementById('player-1-going').appendChild(span3);
     document.getElementById('player-1-going').appendChild(span);
 
     let span2 = document.createElement('span');
+    let span4 = document.createElement('span');
+    span4.innerHTML = "HP"
+    span4.setAttribute("id", 'HP2');
     let hpinfo2 = player2data[3];
     span2.innerHTML = hpinfo2;
     span2.setAttribute("id", 'battlehp2');
+    document.getElementById('player-2-going').appendChild(span4);
     document.getElementById('player-2-going').appendChild(span2);
 
+    
 
 }
 
@@ -239,6 +259,7 @@ function attack(attacker, defender, move) {
         }
     });
 
+    document.getElementById('desc').style.border = '1px solid white'
     
     move.then(data => document.getElementById('desc').innerHTML = attacker + ' used ' + data[0] + ' on ' + defender + '!' ).then(() => document.getElementById('battlehp2').innerHTML -= damage ).then(()=> {
         if (document.getElementById('battlehp2').innerHTML <= 0){
