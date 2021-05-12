@@ -18,26 +18,7 @@
     <div class='header'>
         <h1>Welcome to Pokemon Battle Arena!</h1>
     </div>
-        <div class="rules-box">
-            <div class="rules">
-                <h1>Rules:</h1>
-                <span>Select a pokemon</span>
-                <br>
-                <span>Select 4 moves</span>
-                <br>
-                <span>Hit start game!</span>
-            </div>
-            <div id="poke-info-name">
-                <h2>Pokemon:</h2>
-                <span id="fixpokename"></span>
-            </div>
-            <div id='poke-info'>
-                <h2>Moves:</h2>
-            </div>
-            <div id="testing">
-                <button id="testingbutton">Start Game!</button>
-            </div>
-        </div>
+        
 
         <div id="player1box">
 
@@ -99,18 +80,21 @@
         <!-- </div> -->
     </div>
 
-
-    <div class="DivToScroll">
+    <div style="display:flex; justify-content:center; position:absolute; top:96px; width:100%; z-index: 10;">
+    <div class="DivToScroll" id="remove1">
         <h1 class="selectpokeh1">Select a pokemon!</h1>
         <div class="DivWithScroll" id='index'>
         </div>
     </div>
+    </div>
 
-    <div class="DivToScroll">
+<div style="display:flex; justify-content:center; position:absolute; top:96px; width:100%; z-index: 9;">
+    <div class="DivToScroll" id="remove2">
         <h1 class="selectpokeh1">Select 4 moves!</h1>
         <div class="DivWithScroll" id='index3'>
         </div>
     </div>
+</div>
 <!-- 
     
 
@@ -136,7 +120,30 @@
     </div> -->
 
 
+<div class="rules-box" id="remove3">
+    <div class="rules">
+        <span id="touches">Rules:</span>
+        <span>Select a pokemon</span>
+        <br>
+        <span>Select 4 moves</span>
+        <br>
+        <span>Hit start game!</span>
+    </div>
+    <div style="display: flex; width: fit-content;">
 
+        <div id="poke-info-name">
+            <span id="touches2">Pokemon:</span>
+            <div style="margin-top: 20px;"></div>
+            <span id="fixpokename"></span>
+        </div>
+        <div id='poke-info'>
+            <span id="touches3">Moves:</span>
+        </div>
+        <div id="testing">
+            <button id="testingbutton">Start Game!</button>
+        </div>
+    </div>
+</div>
    
 </body>
 

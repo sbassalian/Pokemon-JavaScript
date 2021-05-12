@@ -1,5 +1,8 @@
 import {getPokemon} from './game.js';
 
+async function main(){
+
+
 let pokemon = await getPokemon();
 
 let player1data = [];
@@ -47,7 +50,11 @@ pokemon.forEach((poke, i) => {
     let button = document.createElement('button');
     button.addEventListener('click', ((e) => initialspawn(e.path[1].id)));
     button.addEventListener('click', (() => clearMoves()));
-    button.addEventListener('click', ((e) => fetchMoves(e.path[1].id)));
+    button.addEventListener('click', ((e) => fetchMoves(e.path[1].id)))
+    button.addEventListener('click', (() =>{
+        let firstRemove = document.getElementById('remove1');
+        firstRemove.remove();
+    }));
     button.setAttribute("id", `${poke.name}`);
     document.getElementById(`${i}`).appendChild(button);
     let pokepic = document.createElement('img');
@@ -197,15 +204,36 @@ function spawnPlayer2(){
     
 }
 
+function removers(){
+    let secondRemove = document.getElementById('remove2');
+    secondRemove.remove();
+    let thirdRemove = document.getElementById('remove3');
+    thirdRemove.remove();
+}
+
 function startGame(){
     gameStarted += 1
     if (gameStarted > 1) {
         return false
     } 
-
     let button = document.getElementById('testingbutton');
+
+    // button.addEventListener('click', (() => {
+    //     let secondRemove = document.getElementById('remove2');
+    //     secondRemove.remove();
+    // }));
+
+    // button.addEventListener('click', (() => {
+    //     let thirdRemove = document.getElementById('remove3');
+    //     thirdRemove.remove();
+    // }));
+
+    button.addEventListener('click', removers());
     button.addEventListener('click', spawnPlayer1());
     button.addEventListener('click', spawnPlayer2());
+
+
+
 
     console.log(player2moves);
     
@@ -299,7 +327,9 @@ function enemyAttack(attacker, defender){
     
 }
 
+}
 
+main();
 
 
 
