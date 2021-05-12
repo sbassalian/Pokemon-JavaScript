@@ -33,9 +33,10 @@
 .attacks {
     position: absolute;
     display: flex;
-    top: 58%;
+    top: calc(459px);
     height: 120px;
-    left: 17.5%;
+    left: calc(50% - 470px);
+
     width: fit-content;
 }
 .attacks-left {
