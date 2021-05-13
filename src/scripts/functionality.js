@@ -48,9 +48,11 @@ pokemon.forEach((poke, i) => {
     
     document.getElementById('index').appendChild(span);
     let button = document.createElement('button');
-    button.addEventListener('click', ((e) => initialspawn(e.path[1].id)));
+    button.addEventListener('click', ((e) => initialspawn(i)));
     button.addEventListener('click', (() => clearMoves()));
-    button.addEventListener('click', ((e) => fetchMoves(e.path[1].id)))
+    button.addEventListener('click', ((e) => {
+        console.log(e.path);
+        fetchMoves(i)}))
     button.addEventListener('click', (() =>{
         let firstRemove = document.getElementById('remove1');
         firstRemove.remove();
@@ -85,6 +87,7 @@ function clearMoves(){
 
 
 function fetchMoves(id){
+  
     pokemon[id].moves.forEach((move, i) => {
         let values = Object.values(move);
         let name = values[0].name;
