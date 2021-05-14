@@ -295,8 +295,12 @@ function attack(attacker, defender, move) {
     move.then(data => document.getElementById('desc').innerHTML = attacker + ' used ' + data[0] + ' on ' + defender + '!' ).then(() => document.getElementById('battlehp2').innerHTML -= damage ).then(()=> {
         if (document.getElementById('battlehp2').innerHTML <= 0){
             // document.getElementById('desc').innerHTML = attacker + ' Won! ' + ' Please refresh page to start a new battle!'
+            let name = attacker.toUpperCase()
 
-            alert(attacker + ' Won! ' + ' Please refresh page to start a new battle!')
+            setTimeout(() => window.location.reload(), 1000);
+
+            alert(name + ' WON!')
+
         }
         else{
             setTimeout(() => enemyAttack(defender, attacker), 1500)
@@ -323,7 +327,12 @@ function enemyAttack(attacker, defender){
     getDamage(battlemove).then(data => document.getElementById('desc').innerHTML = attacker + ' used ' + battlemove + ' on ' + defender + '!').then(() => document.getElementById('battlehp1').innerHTML -= damage ).then(()=> {
         if (document.getElementById('battlehp1').innerHTML <= 0) {
             // document.getElementById('desc').innerHTML = attacker + ' Won! ' + ' Please refresh page to start a new battle!'
-            alert(attacker + ' Won! ' + ' Please refresh page to start a new battle!')
+            let name = attacker.toUpperCase()
+            setTimeout(() => window.location.reload(), 1000)
+
+            alert(name + ' WON!');
+
+
         }
     })
 
