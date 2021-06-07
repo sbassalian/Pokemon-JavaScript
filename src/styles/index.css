@@ -304,3 +304,8 @@ border-bottom: 1px solid white;
     margin-bottom: 10px;
 }
 
+#gif {
+    height: 300px;
+    width: 300px;
+}
+
