@@ -48,10 +48,13 @@ pokemon.forEach((poke, i) => {
     let span = document.createElement('span');
     span.setAttribute("id", `${i}`);
 
+
     let gif = document.getElementById('gif')
-
-    document.getElementById('index').removeChild(gif);
-
+    
+    if (!!gif) {
+        document.getElementById('index').removeChild(gif);
+    }
+    
     document.getElementById('index').appendChild(span);
 
     let button = document.createElement('button');
