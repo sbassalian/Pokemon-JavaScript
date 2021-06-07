@@ -52,9 +52,10 @@ pokemon.forEach((poke, i) => {
     let span = document.createElement('span');
     span.setAttribute("id", `${i}`);
 
-    // document.getElementById('gif').removeChild()
-    // document.getElementById('index').appendChild(span);
-    
+    let gif = document.getElementById('gif')
+    document.getElementById('index').removeChild(gif);
+    document.getElementById('index').appendChild(span);
+
     let button = document.createElement('button');
     button.addEventListener('click', ((e) => initialspawn(i)));
     button.addEventListener('click', (() => clearMoves()));
