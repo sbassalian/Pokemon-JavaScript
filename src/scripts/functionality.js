@@ -2,9 +2,13 @@ import {getPokemon} from './game.js';
 
 async function main(){
 
-console.log(!!pokemon)
-console.log("hello bob")
+
 let pokemon = await getPokemon();
+
+gif = document.createElement('img');
+gif.innerHTML = 
+
+document.getElementById('index').appendChild(gif);
 
 let player1data = [];
 let player2data = [];
@@ -44,10 +48,10 @@ async function getDamage(name) {
 // }
 
 pokemon.forEach((poke, i) => {
-    console.log("ASDASD")
+   
     let span = document.createElement('span');
     span.setAttribute("id", `${i}`);
-    
+    document.getElementById('gif').removeChild()
     document.getElementById('index').appendChild(span);
     let button = document.createElement('button');
     button.addEventListener('click', ((e) => initialspawn(i)));
