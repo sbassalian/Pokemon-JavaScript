@@ -3,6 +3,7 @@ import {getPokemon} from './game.js';
 async function main(){
 
 console.log(!!pokemon)
+console.log("hello bob")
 let pokemon = await getPokemon();
 
 let player1data = [];
@@ -62,6 +63,8 @@ pokemon.forEach((poke, i) => {
     let pokepic = document.createElement('img');
     pokepic.src = poke.front;
     document.getElementById(`${poke.name}`).appendChild(pokepic);
+
+
 })
 
 

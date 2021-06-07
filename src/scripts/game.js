@@ -40,6 +40,7 @@ export async function getPokemon(){
         // .then((obj) => pokemon.push(obj))
         // .then(() => {if (pokemon.length === 9){return(pokemon)}});
     }
+
     return pokemon;
 }
 
