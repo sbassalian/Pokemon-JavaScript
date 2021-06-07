@@ -2,7 +2,7 @@ import {getPokemon} from './game.js';
 
 async function main(){
 
-
+console.log(!!pokemon)
 let pokemon = await getPokemon();
 
 let player1data = [];
