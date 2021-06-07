@@ -6,7 +6,6 @@ async function main(){
 let pokemon = await getPokemon();
 
 
-
 let player1data = [];
 let player2data = [];
 
@@ -49,8 +48,8 @@ pokemon.forEach((poke, i) => {
     let span = document.createElement('span');
     span.setAttribute("id", `${i}`);
 
-    // let gif = document.getElementById('gif')
-    // document.getElementById('index').removeChild(gif);
+    let gif = document.getElementById('gif')
+    document.getElementById('index').removeChild(gif);
 
     document.getElementById('index').appendChild(span);
 
