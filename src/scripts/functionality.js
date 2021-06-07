@@ -44,6 +44,7 @@ async function getDamage(name) {
 // }
 
 pokemon.forEach((poke, i) => {
+    console.log("ASDASD")
     let span = document.createElement('span');
     span.setAttribute("id", `${i}`);
     
