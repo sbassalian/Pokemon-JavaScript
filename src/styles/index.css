@@ -213,6 +213,7 @@ border-bottom: 1px solid white;
     position: absolute;
     top: 290px;
     left: 340px;
+    z-index: 999;
 }
 
 #player2{
