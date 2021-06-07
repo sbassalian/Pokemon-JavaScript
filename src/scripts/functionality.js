@@ -54,6 +54,7 @@ pokemon.forEach((poke, i) => {
 
     let gif = document.getElementById('gif')
     document.getElementById('index').removeChild(gif);
+    
     document.getElementById('index').appendChild(span);
 
     let button = document.createElement('button');
