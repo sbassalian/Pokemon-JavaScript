@@ -5,10 +5,7 @@ async function main(){
 
 let pokemon = await getPokemon();
 
-gif = document.createElement('img');
-gif.innerHTML = 
 
-document.getElementById('index').appendChild(gif);
 
 let player1data = [];
 let player2data = [];
