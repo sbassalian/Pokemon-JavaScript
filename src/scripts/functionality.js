@@ -24,7 +24,6 @@ async function getDamage(name) {
 
     return moveinfo;
 
-
 }
 
 

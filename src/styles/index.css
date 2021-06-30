@@ -211,18 +211,17 @@ border-bottom: 1px solid white;
     height: 220px;
     /* top: 267px; */
     position: absolute;
-    top: 290px;
-    left: 340px;
+    top: calc(260px);
+    left: calc(50% - 340px);
     z-index: 999;
 }
 
 #player2{
     width: 220px;
     height: 220px;
-    /* top: 267px; */
     position: absolute;
-    top: 100px;
-    right: 340px;
+    top: calc(100px);
+    right: calc(50% - 340px);
 }
 
 .going-test {
@@ -241,32 +240,32 @@ border-bottom: 1px solid white;
 #battlehp1 {
     font-family: gamefont;
     position: absolute;
-    top: 340px;
-    left: 880px;
+    top: calc(340px);
+    left: calc(50% + 151px);
     font-size: 26px;
 }
 
 #battlehp2 {
     font-family: gamefont;
     position: absolute;
-    top: 162px;
-    left: 370px;
+    top: calc(162px);
+    left: calc(50% - 370px);
     font-size: 26px;
 }
 
 #HP1 {
     font-family: gamefont;
     position: absolute;
-    top: 340px;
-    left: 820px;
+    top: calc(340px);
+    left: calc(50% + 90px);
     font-size: 26px;
 }
 
 #HP2 {
     font-family: gamefont;
     position: absolute;
-    top: 162px;
-    left: 310px;
+    top: calc(162px);
+    left: calc(50% - 425px);
     font-size: 26px;
 }
 
