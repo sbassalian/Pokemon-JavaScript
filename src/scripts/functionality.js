@@ -98,6 +98,9 @@ function clearMoves(){
 
 
 function fetchMoves(id){
+
+    var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
   
     pokemon[id].moves.forEach((move, i) => {
         let values = Object.values(move);
@@ -109,7 +112,12 @@ function fetchMoves(id){
         document.getElementById('index3').appendChild(span);
         let button = document.createElement('button');
         button.setAttribute("id", `${name}1`);
-        button.addEventListener('click', ((e) => spawnmoves(e.path[1].id)));
+        if(!isFirefox){
+            button.addEventListener('click', ((e) => spawnmoves(e.path[1].id)));
+        }
+        else{
+            console.log("THIS IS FIREFOX")
+        }
         document.getElementById(`${name}`).appendChild(button);
         getDamage(name).then(data => {
             damage = data[1];
